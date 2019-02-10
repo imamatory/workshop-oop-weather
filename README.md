@@ -1,16 +1,15 @@
-# workshop-oop
-[![Build Status](https://travis-ci.org/imamatory/workshop-oop.svg?branch=master)](https://travis-ci.org/imamatory/workshop-oop)
+# workshop-oop-weather
 
 ##Usage
 In console:
 ```
-geo-ip 127.0.0.1
+weather 127.0.0.1
 ```
 
 In code:
 ```js
-import { GeoIp } from '...geo-ip'
+import { Weather } from '...weather'
 
-const app = new GeoIp();
-const location = await app.fetchLocation('8.8.8.8');
+const app = new Weather();
+const report = await app.fetchReport('london');
 ```

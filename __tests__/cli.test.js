@@ -1,9 +1,9 @@
 import cli from '../src/cli';
 
-test('fetches default ip successfully', async () => {
-  const result = { city: 'Moscow', country: 'Russia', query: '123.123.123.123' };
-  const fetchMock = () => ({ data: result });
-  const returnResult = (location) => { expect(location).toEqual(result); };
+test('fetches city weather successfully', async () => {
+  const result = { city: 'Moscow', report: { temp: -2, maxTemp: 0 } };
+  const adapter = { fetchReport: () => Promise.resolve(result) };
+  const returnResult = (report) => { expect(report).toEqual(result); };
 
-  await cli('', { fetchURL: fetchMock, returnResult });
+  await cli(['moscow'], { adapter, returnResult });
 });

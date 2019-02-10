@@ -1,4 +1,9 @@
-import weaterCli from '../weatherCli';
+import program from 'commander';
+import cli from '../cli';
 
-const [city] = process.argv.slice(2);
-weaterCli(city);
+const { args } = program
+  .command('*')
+  .option('-s, --service [name]', 'Specify service')
+  .parse(process.argv);
+
+cli([args[0], program.service]);

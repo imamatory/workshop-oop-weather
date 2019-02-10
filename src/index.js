@@ -1,4 +1,4 @@
 import '@babel/polyfill';
-import GeoIp from './GeoIp';
+import Weather from './Weather';
 
-export default GeoIp;
+export default Weather;

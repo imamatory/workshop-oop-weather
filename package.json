@@ -1,9 +1,9 @@
 {
-  "name": "workshop-oop",
+  "name": "workshop-oop-weather",
   "version": "1.0.0",
   "description": "Workshop OOP 4 tasks",
   "main": "index.js",
-  "repository": "https://github.com/imamatory/workshop-oop.git",
+  "repository": "https://github.com/imamatory/workshop-oop-weather.git",
   "author": "Vadim Safonov <imamatory@gmail.com>",
   "license": "MIT",
   "private": false,
