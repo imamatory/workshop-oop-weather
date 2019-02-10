@@ -6,7 +6,7 @@ export default async (
 ) => {
   const selectAdapterClass = (name) => {
     switch (name) {
-      case 'openWeather':
+      case 'openweather':
         return OpenWeatherAdapter;
       case 'metaweather':
       default:

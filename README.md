@@ -3,7 +3,7 @@
 ## Usage
 In console:
 ```
-weather 127.0.0.1
+weather --service metaweather moscow
 ```
 
 In code:
