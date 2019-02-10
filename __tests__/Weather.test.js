@@ -1,4 +1,4 @@
-import Weather, { OpenWeatherAdapter } from '../src/Weather';
+import Weather, { OpenWeatherAdapter, MetaWeatherAdapter } from '../src/Weather';
 
 test('fetches city weather successfully', async () => {
   const result = { city: 'Moscow', report: { temp: -2, maxTemp: 0 } };
@@ -25,7 +25,7 @@ test('works with MetaWeatherAdapter adapter', async () => {
     },
   };
 
-  const instance = new Weather({ client });
+  const instance = new Weather({ adapter: new MetaWeatherAdapter({ client }) });
   const report = await instance.fetchReport('moscow');
   expect(report).toEqual(result);
 });

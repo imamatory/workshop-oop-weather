@@ -71,10 +71,8 @@ export class OpenWeatherAdapter extends AbstractAdapter {
 }
 
 export default class Weather {
-  constructor({
-    adapter, requestConfig, client,
-  }) {
-    this.adapter = adapter || new MetaWeatherAdapter({ client, requestConfig });
+  constructor({ adapter }) {
+    this.adapter = adapter;
   }
 
   fetchReport = city => this.adapter.fetchReport(city);
