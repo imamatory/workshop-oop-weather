@@ -1,8 +1,8 @@
-const createNode = defineMethods => (name, attrs = {}, content = '') => {
+const createNode = createContext => (name, attrs = {}, content = '') => {
   const baseCtx = {
     renderAttrs: attrsObj => Object.keys(attrsObj).map(key => ` ${key}=${attrs[key]}`).join(''),
   };
-  return defineMethods({
+  return createContext({
     ...baseCtx, name, attrs, content,
   });
 };
